@@ -18,7 +18,6 @@ namespace SistemaCompra.API.SolicitacaoCompra
         }
 
 
-        [HttpGet, Route("solicitacao-compra/{id}")]
         [HttpPost, Route("solicitacao-compra/cadastro")]
         [ProducesResponseType(201)]
         [ProducesResponseType(400)]
