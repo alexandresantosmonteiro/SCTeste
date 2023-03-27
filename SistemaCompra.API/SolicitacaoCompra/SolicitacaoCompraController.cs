@@ -24,12 +24,12 @@ namespace SistemaCompra.API.SolicitacaoCompra
         [ProducesResponseType(400)]
         [ProducesResponseType(404)]
         [ProducesResponseType(500)]
-        public IActionResult RegistrarCompra([FromBody] RegistrarCompraCommand produto)
+        public IActionResult RegistrarCompra([FromBody] RegistrarCompraCommand solicitacaoCompra)
         {
-            if (produto?.Qtde == 0)
+            if (solicitacaoCompra?.Qtde == 0)
                 return StatusCode(400, "O total de itens de compra deve ser maior que 0");
 
-            _mediator.Send(produto);
+            _mediator.Send(solicitacaoCompra);
             return Ok();
         }
 
