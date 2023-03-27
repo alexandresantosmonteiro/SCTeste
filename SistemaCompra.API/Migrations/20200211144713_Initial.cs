@@ -19,11 +19,11 @@ namespace SistemaCompra.API.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Produto", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
+                }); 
+             
+            migrationBuilder.CreateTable( 
                 name: "SolicitacaoCompra",
-                columns: table => new
+                columns: table => new  
                 {
                     Id = table.Column<Guid>(nullable: false),
                     Data = table.Column<DateTime>(nullable: false),
